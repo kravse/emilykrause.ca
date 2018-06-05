@@ -1,0 +1,296 @@
+svg:not(:root)
+  display: block
+
+#app
+  > .view-wrap
+    min-height: 80vh
+    > .view-content
+      background-color: $bg-regular
+      min-height: 80vh
+
+.view-wrap
+  // padding-top: 87px
+
+  +media('sm')
+    padding-top: 0
+
+body
+  font-family: 'Open Sans', sans-serif
+  font-style: normal
+  font-weight: 400
+  font-size: ($base)px
+  letter-spacing: -0.2px
+  color: $body-copy
+  background: $white
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  opacity: 0
+  animation: fadeIn
+  animation-delay: 0.2s
+  animation-duration: 0.3s
+  animation-fill-mode: forwards
+
+  +media('md')
+    font-size: ($base*0.9)px
+
+  +media('sm')
+    font-size: ($base*0.8)px
+
+  /* Heading */
+  .h0, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+    font-family: 'Raleway', sans-serif
+    font-style: normal
+    font-weight: 400
+    color: $header-copy
+    letter-spacing: normal
+    margin-top: 0
+    margin-bottom: 0.3em
+    line-height: 1em
+
+  .h0
+    font-size: $h0-em
+    letter-spacing: (-1.25/$h0)em
+
+  h1, .h1
+    font-size: $h1-em
+    letter-spacing: (-1/$h1)em
+    line-height: 1.05em
+
+    +media('sm')
+      font-size: $h2-em
+
+  h2, .h2
+    font-size: $h2-em
+    letter-spacing: (-0.75/$h2)em
+
+    +media('sm')
+      font-size: $h3-em
+
+  h3, .h3
+    font-size: $h3-em
+    letter-spacing: (-0.5/$h3)em
+
+    +media('md')
+      font-size: $h4-em
+
+  h4, .h4
+    font-size: $h4-em
+
+  h5, .h5
+    font-size: $h5-em
+
+  h6, .h6
+    font-size: $h6-em
+
+  p
+    font-family: 'Open Sans', sans-serif
+    line-height: 1.4em
+    margin-top: 0
+    margin-bottom: 0.4em
+
+    a
+      &:hover
+        text-decoration: underline
+
+    &.large
+      font-size: $h3-em
+      letter-spacing: (-0.5/$h3)em
+
+      +media('md')
+        font-size: $h4-em
+
+  .bold, strong
+    font-weight: 600
+
+  .caps
+    text-transform: capitalize
+
+  .upper
+    text-transform: uppercase
+
+  label
+    font-weight: 400
+
+  .green-text
+    color: $green
+
+  .small-copy
+    font-size: $sm-em
+
+  .alert
+    line-height: 1.3em
+    padding: 15px
+    margin-bottom: 25px
+    border: 1px solid transparent
+    border-radius: 4px
+
+    &.alert-danger
+      color: $red
+      border: 1px solid $red
+      background-color: $light-pink
+
+    &.alert-success
+      color: $green
+      border: 1px solid $green
+      background-color: $light-green
+
+    &.alert-warning
+      color: #8a6d3b
+      border: 1px solid #CAAD16
+      background-color: #fcf8e3
+
+    &.alert-success
+      color: $smooth-green
+      border: 1px solid $smooth-green
+      background-color: $light-green
+
+  /* Hyperlink */
+  a
+    color: $link-regular
+    text-decoration: none
+
+    &:hover
+      color: $link-regular
+      opacity: 0.8
+      cursor: pointer
+
+  img
+    width: 100%
+    max-width: 100%
+
+  .bg-blue
+    background-color: $bg-blue
+
+  .bg-dark-blue
+    background-color: $bg-dark-blue
+
+    h1, h2, h3, h4, h5, h6, p
+      color: $light-blue
+
+    h1, h2, h3, h4, h5, h6, p
+      color: $white
+
+  .bg-mid
+    background-color: $bg-mid
+
+  .bg-dark
+    background-color: $bg-dark
+
+    p, h1, h2, h3, h4, h5, h6, a
+      color: $white
+
+  .bg-regular
+    background-color: $bg-regular
+
+  .element
+    display: block
+    width: 100%
+
+    &.large
+      max-width: 950px
+
+    &.medium
+      max-width: 800px
+
+    &.small
+      max-width: 640px
+
+    &.xs
+      max-width: 480px
+
+    &.centered
+      margin: 0 auto
+
+  section
+    padding: 90px 20px
+
+    &.no-padding
+      padding: 0
+
+    &:not(.no-padding)
+      &.smaller
+        padding: 45px 20px
+
+        +media('sm')
+          padding: 30px 10px
+
+      +media('sm')
+        padding: 45px 10px
+
+    &.smaller
+      padding: 45px 20px
+
+      +media('sm')
+        padding: 30px 10px
+
+    +media('sm')
+      padding: 45px 10px
+
+    &.bg-blue
+      background-color: $bg-blue
+
+    &.bg-dark
+      background-color: $bg-dark
+
+    &.bg-regular
+      background-color: $bg-regular
+
+    .section-inner
+      display: block
+      max-width: 1200px
+      margin: 0 auto
+
+    .section-inner-md
+      display: block
+      max-width: 800px
+      margin: 0 auto
+
+  .clearfix
+    clearfix()
+
+  [v-cloak]
+    display: none !important
+
+  .text-center
+    text-align: center
+
+  .vertical-center
+    display: flex
+    align-items: center
+
+    > *
+      flex-grow: 1
+      flex-basis: 0
+
+  .retina-block, .retina-inline
+    display: none !important
+
+  .visible-xs
+    display: none
+
+  .visible-sm
+    display: none
+
+  +media('md')
+    .visible-sm
+      display: block
+
+    .hidden-sm
+      display: none
+
+  +media('sm')
+    .hidden-xs
+      display: none
+
+    .visible-xs
+      display: block
+
+  @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    .low-res
+      display: none !important
+
+    .retina-block
+      display: block !important
+
+    .retina-inline
+      display: inline !important
